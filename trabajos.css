@@ -1,0 +1,74 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* - - - - - - - LOGO - - - - - - - - - */
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 95px;
+  width: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* - - - - - - - BOTON VOLVER - - - - - - - - - */
+.btn-volver {
+  background: #111;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.btn-volver:hover {
+  background: #333;
+}
+
+
+/* GRILLA DE FOTOS */
+.grilla-fotos {
+  column-count: 3;         /* cantidad de columnas */
+  column-gap: 20px;        /* espacio entre columnas */
+  padding: 20px;
+}
+
+.grilla-foto {
+  break-inside: avoid;     /* evitar que se rompan */
+  margin-bottom: 20px;     /* espacio entre items */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+
+.grilla-foto:hover {
+  transform: scale(1.03);
+}
+
+.grilla-foto img {
+  width: 100%;
+  height: auto;           /* deja altura natural */
+  display: block;
+  object-fit: cover;
+}
