@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -9,7 +11,11 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Helvetica World', 'Helvetica', 'Arial', sans-serif;
+  h1 {
+      font-family: 'Arimo', sans-serif;
+      font-weight: 800; 
+  }
 }
 
 
@@ -58,7 +64,7 @@ nav .logo img {
 /* - - - - - - - TITULO FRASE - - - - - - - - - */
 .titulo-frase {
   text-align: center;
-  color: #444;
+  color: #f5e0de;
   margin-top: 100px;
 }
 
@@ -66,45 +72,61 @@ nav .logo img {
 
 /* - - - - - - - TEXTO - - - - - - - - - */
 .contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 125px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding-bottom: 50px;
 }
 
 .contenido-texto {
-  flex: 1;
-  min-width: 300px;
+    flex: 1;
+    min-width: 300px;
+    margin-top: 50px;
+    column-count: 2;
+    column-gap: 100px; 
 }
 
 .contenido-texto h1 {
-  font-size: 2.2em;
-  color: rgb(40, 41, 41);
-  margin-bottom: 20px;
+    font-size: 2.2em;
+    color: rgb(40, 41, 41);
+    margin-bottom: 20px;
+    column-span: all;
 }
 
 .contenido-texto p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 0.8em;
+    font-weight: 550; 
+    break-inside: avoid; 
+}
+
+
+
+.marca {
+  text-align: right;
+}
+
+
+
+/* - - - - - - - FONDO - - - - - - - - - */
+.contenedor-rosa {
+  background-color: #f5e0de;
 }
 
 
 
 /* - - - - - - - QUE HAGO - - - - - - - - - */
-.contenedor-rosa {
-  margin: 75px;
-  background-color: palevioletred;
-}
 .titulo-principal {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
-  font-size: 3rem; 
+  margin-top: 30px;
+  font-size: 3.5rem; 
   font-weight: 900; 
   line-height: 1.1; 
   color: black; 
@@ -112,7 +134,6 @@ nav .logo img {
 }
 
 .palabra-titulo { 
-  background-color: white; 
   padding: 0; 
   margin-left: 25px; 
 }
@@ -121,9 +142,8 @@ nav .logo img {
   display: flex; 
   justify-content: space-between; 
   align-items: flex-start; 
-  
   width: 90%; 
-  margin-top: 30px; 
+  margin-top: 70px; 
   margin-left: auto; 
   margin-right: auto; 
 }
@@ -131,7 +151,7 @@ nav .logo img {
 .item-servicio {
   flex-basis: 25%; 
   padding: 0 15px; 
-  font-size: 0.9rem; 
+  font-size: 1.1rem; 
   line-height: 1.4;
   text-align: left;
 }
@@ -160,7 +180,8 @@ nav .logo img {
 .titulo-proyectos {
   margin-top: 150px;
   margin-left: 25px;
-  color: #444;
+  color: #852f1b;
+  font-size: 1.2rem;
 }
 
 
@@ -219,14 +240,118 @@ nav .logo img {
 
 
 
-/* - - - - - - - FOOTER - - - - - - - - - */
-/* Footer principal */
-.main-footer {
-  padding: 50px 0;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #bcbcbc;
+/* - - - - - - - TITULO FINAL - - - - - - - - - */
+.titulo-final {
+  color: #852f1b;
+  margin-left: 25px;
+  font-size: 1.4rem;
 }
+
+
+
+/* - - - - - - - FOOTER - - - - - - - - - */
+/* --- FOOTER GENERAL (Contenedor principal #footer) --- */
+/* Esta sección tiene el 100% del ancho y lleva el color de fondo claro */
+#footer {
+    width: 100%;
+    margin-top: 0; 
+    background-color: #f5e0de; 
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- SECCIÓN PRINCIPAL (Contenido Centrado con Max-Width) --- */
+/* ---------------------------------------------------------------------- */
+.main-footer {
+    display: flex;
+    /* Distribuye los ítems para que ocupen el espacio disponible entre ellos */
+    justify-content: space-between; 
+    align-items: center;
+    
+    /* CLAVE: Limita el ancho del contenido (ej: 1200px) */
+    max-width: 1200px; 
+    /* CLAVE: Centra el contenido limitado, creando los márgenes a los costados */
+    margin: 0 auto; 
+    
+    padding: 30px 40px; /* Padding para que el contenido no se pegue al borde del max-width */
+    color: black;
+    /* Eliminamos el background-color de aquí, ya que está en #footer */
+}
+
+.footer-item {
+    padding: 0 20px; 
+    font-size: 1.2em;
+    display: flex;
+    align-items: center; 
+    gap: 8px; /* Espacio entre el ícono y el texto/link */
+}
+
+/* --- LOGO/NOMBRE (POSSETTI) --- */
+.footer-logo {
+    border-right: 1px solid #ccc; 
+    padding-right: 40px; 
+    padding-left: 0; 
+}
+.logo-text {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* --- CONTACTO (Teléfono y Email) --- */
+.footer-contact {
+    border-right: none; 
+}
+
+/* Específico: Borde derecho después del teléfono */
+.footer-contact:first-of-type {
+    border-right: 1px solid #ccc;
+}
+
+.footer-contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-contact i {
+    font-size: 1.1em; 
+    color: inherit;
+}
+
+/* --- SOCIAL (Links de redes) --- */
+.footer-social {
+    /* Borde izquierdo para la línea divisoria que separa del email */
+    border-left: 1px solid #ccc;
+    
+    border-right: none; 
+    
+    padding-left: 40px; 
+    padding-right: 0; 
+
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5em; 
+    display: block; 
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- PIE DE PÁGINA NEGRO (Copyright) --- */
+/* ---------------------------------------------------------------------- */
+footer {
+    background-color: #111; /* Color negro */
+    border-top: 1px solid #444; 
+    font-size: 16px;
+    padding: 15px;
+    color: #ccc; 
+    text-align: center;
+    font-weight: 400;
+}
+
+/* --- Estilos no utilizados en el HTML actual, pero presentes en tu CSS anterior --- */
 
 .main-footer ul {
   list-style: none;
@@ -253,65 +378,7 @@ nav .logo img {
   color: #6EB981;
 }
 
-footer {
-  background-color: #111;
-  border-top: 1px solid #444;
-  font-size: 16px;
-  padding: 15px;
-  color: #ccc;
-  text-align: center;
-}
-
 footer a {
   text-decoration: none;
-  color: #6EB981;
-}
-
-.logoinfo p {
-  color: #6EB981;
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.detalles-contacto {
-  margin-top: 20px;
-}
-
-.detalles-contacto img {
-  max-width: 150px; 
-  height: auto; 
-  object-fit: contain;
-  margin-bottom: 20px; 
-  display: block; 
-}
-
-.detalles-contacto li {
-  list-style: none;
-  margin: 10px 0;
-}
-
-.detalles-contacto li a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.detalles-contacto .fa {
-  color: #000000;
-  margin-right: 10px;
-}
-
-.sociallogos {
-  padding: 20px 0;
-  text-align: center;
-}
-
-.sociallogos .logobox a {
-  padding: 0 10px;
-  text-decoration: none;
-  color: #000000;
-  font-size: 22px;
-}
-
-.sociallogos .logobox a:hover {
   color: #6EB981;
 }
