@@ -55,6 +55,15 @@ nav .logo img {
 
 
 
+/* - - - - - - - TITULO FRASE - - - - - - - - - */
+.titulo-frase {
+  text-align: center;
+  color: #444;
+  margin-top: 100px;
+}
+
+
+
 /* - - - - - - - TEXTO - - - - - - - - - */
 .contenedor {
   display: flex;
@@ -86,6 +95,10 @@ nav .logo img {
 
 
 /* - - - - - - - QUE HAGO - - - - - - - - - */
+.contenedor-rosa {
+  margin: 75px;
+  background-color: palevioletred;
+}
 .titulo-principal {
   display: flex;
   flex-direction: column;
@@ -96,11 +109,10 @@ nav .logo img {
   line-height: 1.1; 
   color: black; 
   text-transform: uppercase;
-  margin-top: 75px; 
 }
 
 .palabra-titulo { 
-  background-color: transparent; 
+  background-color: white; 
   padding: 0; 
   margin-left: 25px; 
 }
